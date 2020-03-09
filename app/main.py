@@ -1,4 +1,7 @@
 from flask import Flask, request
+import cv2
+import sys
+import numpy
 
 app = Flask(__name__)
 
@@ -46,4 +49,4 @@ def sendToArduino(x):
     pass
     
 if __name__ == '__main__':
-    app.run()
+    app.run(threaded=True)
